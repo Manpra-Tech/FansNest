@@ -1,10 +1,9 @@
 let stubHandler;
-const dynamicRequire = eval('require');
 
 try {
-  stubHandler = dynamicRequire('../../../local-stub-api');
+  stubHandler = require('../../../local-stub-api');
 } catch (error) {
-  stubHandler = dynamicRequire('../../local-stub-api');
+  stubHandler = require('../../local-stub-api');
 }
 
 export const config = {
