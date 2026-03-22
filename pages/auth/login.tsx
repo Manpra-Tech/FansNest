@@ -81,7 +81,7 @@ function Login({
               <div className={style['trust-row']}>
                 <span>Verified creators</span>
                 <span>Private chat + paid drops</span>
-                <span>Management console on :4611</span>
+                <span>Public management console ready</span>
               </div>
             </div>
             <SocialLoginGroup />
