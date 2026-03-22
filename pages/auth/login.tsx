@@ -3,7 +3,6 @@ import { settingService } from '@services/setting.service';
 import dynamic from 'next/dynamic';
 import { NextPageContext } from 'next/types';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect } from 'react';
 import { authService } from '@services/auth.service';
 import { userService } from '@services/user.service';
@@ -27,48 +26,6 @@ function Login({
   metaDescription,
   loginPlaceholderImage
 }: Props) {
-  const signalCards = [
-    {
-      label: 'For fans',
-      value: 'One-tap access',
-      meta: 'Follow, message, subscribe, unlock'
-    },
-    {
-      label: 'For creators',
-      value: 'Multiple revenue lanes',
-      meta: 'Memberships, live, messages, storefronts'
-    },
-    {
-      label: 'Premium feel',
-      value: 'Fast and mobile-first',
-      meta: 'Clean discovery, private replies, smooth return visits'
-    }
-  ];
-
-  const previewCards = [
-    {
-      eyebrow: 'Memberships',
-      title: 'Private subscriptions that feel clear from the first glance.',
-      description: 'Fans should understand access, value, and what unlocks next in seconds.',
-      image: '/default-banner.jpeg',
-      badge: 'Subscriptions'
-    },
-    {
-      eyebrow: 'Live + direct',
-      title: 'Messages, live sessions, and priority replies in one rhythm.',
-      description: 'Creators need repeatable touchpoints. Fans need direct access that feels worth returning to.',
-      image: '/stream.jpg',
-      badge: 'Direct access'
-    },
-    {
-      eyebrow: 'Commerce',
-      title: 'Storefronts, bundles, and exclusive drops without friction.',
-      description: 'The platform should move naturally from discovery into paid moments and retained support.',
-      image: '/card-bg.jpg',
-      badge: 'Creator revenue'
-    }
-  ];
-
   const handleLoggedInRedirect = async () => {
     const token = authService.getToken();
     if (!token) return;
@@ -113,21 +70,11 @@ function Login({
               />
               <div className={style['media-scrim']} />
               <div className={style['media-copy']}>
-                <span className={style['media-eyebrow']}>Premium creator memberships</span>
-                <h2>Private communities, direct access, and creator revenue in one polished flow.</h2>
+                <span className={style['media-eyebrow']}>Members-first creator access</span>
+                <h2>Private access, premium drops, and recurring creator support.</h2>
                 <p>
-                  Fans decide fast. The product has to feel trustworthy, modern, and effortless from the
-                  first scroll.
+                  Everything should feel clear, direct, and fast on the first tap, especially on mobile.
                 </p>
-              </div>
-              <div className={style['signal-grid']}>
-                {signalCards.map((item) => (
-                  <div className={style['signal-card']} key={item.label}>
-                    <span>{item.label}</span>
-                    <strong>{item.value}</strong>
-                    <p>{item.meta}</p>
-                  </div>
-                ))}
               </div>
             </div>
             <div className={style['content-right']}>
@@ -148,49 +95,10 @@ function Login({
                   <span>Fast payouts</span>
                 </div>
               </div>
-              <div className={style['path-row']}>
-                <Link className={`${style['path-link']} ${style.primary}`} href="/auth/register">
-                  Start as a fan
-                </Link>
-                <Link className={`${style['path-link']} ${style.secondary}`} href="/auth/creator-register">
-                  Become a creator
-                </Link>
-              </div>
               <SocialLoginGroup />
               <LoginForm />
             </div>
           </div>
-          <section className={style['platform-preview']}>
-            <div className={style['section-copy']}>
-              <span>Inside FansNest</span>
-              <h2>Move from discovery to paid access without losing momentum.</h2>
-              <p>
-                Each surface should do one job well: create trust, show creator value, and make the next
-                action obvious.
-              </p>
-            </div>
-            <div className={style['preview-grid']}>
-              {previewCards.map((card) => (
-                <article className={style['preview-card']} key={card.title}>
-                  <div className={style['preview-media']}>
-                    <Image
-                      alt={card.title}
-                      fill
-                      quality={75}
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                      src={card.image}
-                    />
-                    <span className={style['preview-badge']}>{card.badge}</span>
-                  </div>
-                  <div className={style['preview-body']}>
-                    <span className={style['preview-eyebrow']}>{card.eyebrow}</span>
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
         </div>
       </div>
     </>
