@@ -53,7 +53,12 @@ function LoginForm({
             </div>
           ))}
         </div>
-        <small>Management console uses `admin / adminadmin` on `http://localhost:4611/auth/login`.</small>
+        <small>
+          Management console uses `admin / adminadmin` on
+          {' '}
+          <a href="https://fansnest-user.vercel.app/auth/login" target="_blank" rel="noreferrer">https://fansnest-user.vercel.app/auth/login</a>
+          .
+        </small>
       </div>
       <Form
         name="normal_login"
