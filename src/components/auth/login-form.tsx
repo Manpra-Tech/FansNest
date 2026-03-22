@@ -27,38 +27,23 @@ function LoginForm({
   siteName,
   handleLogin
 }: PropsFromRedux) {
-  const demoAccounts = [
-    {
-      label: 'Fan demo',
-      username: 'user',
-      password: 'useruser'
-    },
-    {
-      label: 'Creator demo',
-      username: 'creator1',
-      password: 'creatorcreator'
-    }
-  ];
+  const brandName = (siteName || 'FansNest').replace(/\s*local\s*/ig, ' ').trim() || 'FansNest';
 
   return (
     <div className={style['login-form']}>
-      <div className={style['demo-box']}>
-        <div className={style['demo-title']}>Quick demo access</div>
-        <div className={style['demo-grid']}>
-          {demoAccounts.map((account) => (
-            <div className={style['demo-item']} key={account.label}>
-              <strong>{account.label}</strong>
-              <span>{account.username}</span>
-              <span>{account.password}</span>
-            </div>
-          ))}
+      <div className={style['entry-box']}>
+        <div className={style['entry-title']}>New to FansNest?</div>
+        <div className={style['entry-grid']}>
+          <Link className={style['entry-link']} href="/auth/register">
+            <strong>Join as a fan</strong>
+            <span>Follow creators, unlock private access, and subscribe in one flow.</span>
+          </Link>
+          <Link className={style['entry-link']} href="/auth/creator-register">
+            <strong>Become a creator</strong>
+            <span>Launch memberships, direct messages, live sessions, and store drops.</span>
+          </Link>
         </div>
-        <small>
-          Management console uses `admin / adminadmin` on
-          {' '}
-          <a href="https://fansnest-user.vercel.app/auth/login" target="_blank" rel="noreferrer">https://fansnest-user.vercel.app/auth/login</a>
-          .
-        </small>
+        <small>Built for fast discovery, repeat support, and private community access.</small>
       </div>
       <Form
         name="normal_login"
@@ -107,7 +92,7 @@ function LoginForm({
           {' '}
           for any help if you are not able to login with your existing
           {' '}
-          {siteName || 'Fanso'}
+          {brandName}
           {' '}
           account
         </p>
@@ -115,7 +100,7 @@ function LoginForm({
         <p style={{ marginBottom: 5 }}>Don&apos;t have an account yet?</p>
         <p>
           <Link href="/auth/register">
-            {`Sign up for ${siteName}`}
+            {`Sign up for ${brandName}`}
           </Link>
         </p>
       </div>
