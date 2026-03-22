@@ -1,0 +1,31 @@
+.subscription-bl {
+  padding: 14px 16px;
+  border: 1px solid rgba(96, 165, 250, 0.16);
+  border-radius: 20px;
+  margin: 10px 0 0;
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(247, 250, 255, 0.99));
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+
+  h5 {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #0f172a;
+  }
+
+
+  .sub-btn {
+    width: 100%;
+    min-height: 42px;
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    border: none;
+    padding: 8px 15px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 12px;
+    outline: none;
+  }
+}

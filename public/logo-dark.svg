@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="96" viewBox="0 0 320 96" fill="none">
+  <rect width="320" height="96" rx="24" fill="#E6F7FF"/>
+  <rect x="10" y="10" width="76" height="76" rx="20" fill="#0F172A"/>
+  <path d="M34 30H63V39H44V48H60V57H44V71H34V30Z" fill="#42B1E8"/>
+  <path d="M67 30H83L62 71H46L67 30Z" fill="#94A3B8"/>
+  <text x="106" y="45" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">FansNest</text>
+  <text x="106" y="67" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="1">CREATOR PLATFORM</text>
+</svg>

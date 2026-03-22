@@ -1,0 +1,17 @@
+{
+  "name": "FansNest",
+  "short_name": "FansNest",
+  "description": "FansNest creator platform",
+  "start_url": "/auth/login",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#42b1e8",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

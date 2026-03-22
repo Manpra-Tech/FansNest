@@ -1,0 +1,137 @@
+.creator-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.8fr);
+  gap: 16px;
+  margin: 12px 0 18px;
+  padding: 20px;
+  border-radius: 28px;
+  border: 1px solid rgba(59, 130, 246, 0.14);
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.97), rgba(26, 43, 73, 0.95));
+  color: #fff;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+
+  .hero-copy {
+    .eyebrow {
+      display: inline-flex;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 10px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0;
+      color: rgba(226, 232, 240, 0.88);
+      font-size: 14px;
+      line-height: 1.65;
+      max-width: 700px;
+    }
+  }
+
+  .hero-signals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+
+    span {
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+  .hero-metrics {
+    display: grid;
+    gap: 12px;
+
+    div {
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    small,
+    strong {
+      display: block;
+    }
+
+    small {
+      color: rgba(226, 232, 240, 0.78);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    strong {
+      margin-top: 8px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.results-bar {
+  margin: 10px 0 16px;
+
+  span {
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.08);
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .creator-hero {
+    grid-template-columns: 1fr;
+    padding: 18px;
+
+    .hero-copy {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .creator-hero {
+    margin-top: 8px;
+    padding: 16px;
+    border-radius: 22px;
+
+    .hero-copy {
+      h1 {
+        font-size: 21px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 1.55;
+      }
+    }
+  }
+}

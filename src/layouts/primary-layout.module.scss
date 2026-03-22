@@ -1,0 +1,41 @@
+
+.quickSwitch {
+  right: 48px;
+  bottom: 110px;
+
+  :global .ant-float-btn-body {
+    background: linear-gradient(135deg, #0f172a, #3b82f6);
+    box-shadow: 0 18px 40px rgba(59, 130, 246, 0.24);
+  }
+
+  :global .ant-float-btn-icon {
+    color: #fff;
+  }
+}
+
+.backTop {
+  right: 50px;
+
+  :global .ant-back-top-content {
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    opacity: 0.85;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px 1px rgba(69, 65, 78, 0.1);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .quickSwitch {
+    right: 16px;
+    bottom: 96px;
+  }
+
+  .backTop {
+    right: 16px;
+    bottom: 20px;
+  }
+}
