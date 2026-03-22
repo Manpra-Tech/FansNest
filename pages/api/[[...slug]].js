@@ -1,4 +1,10 @@
-const stubHandler = require('../../../local-stub-api');
+let stubHandler;
+
+try {
+  stubHandler = require('../../../local-stub-api');
+} catch (error) {
+  stubHandler = require('../../local-stub-api');
+}
 
 export const config = {
   api: {
